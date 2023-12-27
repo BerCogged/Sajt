@@ -1,2 +1,2 @@
 # Sajt
-Website for software company
+Website for casino
