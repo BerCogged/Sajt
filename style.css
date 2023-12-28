@@ -29,6 +29,7 @@ html, body{
     width: 100%;
     background-color: aqua;
     height: 10%;
+    position: relative;
 }
 .nav_dugme{
     margin-left: 91%;
@@ -54,4 +55,18 @@ html, body{
     background-color: white;
     margin: 5%;
     padding: 5%;
+}
+#drugi{
+    display: none;
+}
+#prvi #drugi {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.slika{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
 }
