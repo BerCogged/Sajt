@@ -26,6 +26,8 @@ body{
     height: 100%;
 }
 .pomeren{
+    display: flex;
+    justify-content: flex-start;
     float: right;
 }
 #wheel{
@@ -159,4 +161,19 @@ body{
 }
 .link a:hover{
     background-color: aqua;
+}
+#tabla{
+    float: right;
+    background-color: #c66e16;
+    overflow: auto;
+    margin-top: 10%;
+    
+}
+.nula_dugme{
+    margin-top: 1000%;
+    float: right;
+
+}
+#vrednost{
+    display: none;
 }

@@ -75,6 +75,7 @@ const valueGenerator = (angleValue) =>{
     for (let i of rotatitonValues){
         if (angleValue>=i.minDegree && angleValue<=i.maxDegree){
             finalValue.innerHTML = '<p>Number is: ' + i.value + '</p>';
+            document.getElementById("vrednost").innerHTML=i.value;
             spinBtn.disabled = false;
             break;
         }
@@ -103,8 +104,9 @@ spinBtn.addEventListener("click", ()=>{
     },10);
 });
 document.getElementById("dugme").addEventListener('click', pomeranje);
-document.getElementById("prvo_dugme").addEventListener('click', pokazi_prvog);
-document.getElementById("drugo_dugme").addEventListener('click',pokazi_drugog);
+document.getElementById("nula_dugme").addEventListener('click', kladi);
+document.getElementById("crveno_dugme").addEventListener('click',crveno);
+document.getElementById("crno_dugme").addEventListener('click',crno);
 
 function pomeranje(){
     let t = document.getElementById("desni_nav");
@@ -122,4 +124,31 @@ function vrati(){
     let c = '<div class="link"><a href="http://127.0.0.1:5500/games/roullet/index.html">Roullet</a></div><br> <div class="link"><div class="link"><a href="#">Blackjack</a></div> <div class="link"><a href="#">Poker</a></div> <br> <div class="link"><a href="#">Slot</a> </div><br> <div class="link"><a href="#">Coin flip</a> </div><br><div class="link"><a href="#">Plinko</a></div>'
     x.innerHTML = '<button id="dugme"></button> <p>desni nav</p>' + c
     document.getElementById("dugme").addEventListener('click', pomeranje);
+}
+function kladi(){
+    x=document.getElementById("vrednost");
+    value = x.innerHTML;
+    alert(value);
+}
+function crveno(){
+    x=document.getElementById("vrednost");
+    value = x.innerHTML;
+    let brojevi = [32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,32,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26]
+    for (var i=0;i<brojevi.length;i++){
+        if (value==brojevi[i]){
+            if (i%2==0)
+                alert("Bravo dobio si");
+        }
+    }
+}
+function crno(){
+    x=document.getElementById("vrednost");
+    value = x.innerHTML;
+    let brojevi = [32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,32,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26]
+    for (var i=0;i<brojevi.length;i++){
+        if (value==brojevi[i]){
+            if (i%2!=0)
+                alert("Bravo dobio si");
+        }
+    }
 }
