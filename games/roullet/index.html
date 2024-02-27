@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SoftX Casino</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="nav">
-            <a href="http://127.0.0.1:5500/index.html"><img class="slika" src="pictures/logo2.png" alt="logo" href="index.html"></a>
+            <a href="http://127.0.0.1:5500/index.html"><img class="slika" src="http://127.0.0.1:5500/pictures/logo2.png" alt="logo" href="index.html"></a>
             <div class="nav_dugme">
             <ul>
                 <li><button>login</button></li>
@@ -31,15 +30,26 @@
                 <div class="link"><a href="#">Plinko</a></div>
             </div>
         </div>
-        <div class="main">
-            <div class="window">
-                <p id="prvi">ssssssssssssssssss</p>
-                <p id="drugi">dddddddddddddddddddd</p>
-                <button id="prvo_dugme"></button>
-                <button id="drugo_dugme"></button>
+        <div class="pomeren">
+            <div class="wrapper">
+                <div class="conteiner">
+                    <canvas id="wheel"></canvas>
+                    <button id="spin-btn">SPIN</button>
+                    <img class="arrow" src="assets/arrow3.png" alt="">
+                </div>
+                <div id="final-value">
+                    <p>Click on the SPIN button to START</p>
+                </div>
             </div>
         </div>
-
+        <div class="tabla">
+            <button id="nula_dugme">0</button>
+            <button id="crveno_dugme">crveno</button>
+            <button id="crno_dugme">crno</button>
+        </div>
+        <div id="vrednost"></div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
         <script src="java.js"></script>
     </body>
 </html>
